@@ -151,7 +151,7 @@ button:hover {
     padding: 0;
   }
   #cards-container {
-    gap: 20px;
+    gap: 85px; /* Aumenta el espacio vertical solo en móvil */
     padding: 0 5px;
   }
   .card {
@@ -163,7 +163,7 @@ button:hover {
     min-height: 60px;
   }
   button {
-    font-size: 0.9rem;
-    padding: 6px 12px;
+    font-size: 1rem;
+    padding: 10px 20px;
   }
 }
