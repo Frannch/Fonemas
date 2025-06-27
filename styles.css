@@ -6,8 +6,9 @@ body {
 }
 
 .container {
-  max-width: 600px;
+  max-width: 1200px; /* O el valor que prefieras */
   margin: auto;
+  width: 100%;
 }
 
 #search {
@@ -24,22 +25,37 @@ body {
 }
 
 #cards-container {
-  display: flex;
-  flex-direction: column;
-  gap: 50px; /* Espacio entre tarjetas */
-  align-items: center; /* Opcional: centra las tarjetas horizontalmente */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas en escritorio */
+  gap: 50px;
+  justify-items: center;
+  align-items: start;
+  position: relative;
+  z-index: 1;
+}
+
+/* En móvil, solo 1 columna */
+@media (max-width: 700px) {
+  #cards-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 5px;
+  }
 }
 
 .card {
   perspective: 1000px;
   width: 100%;
-  max-width: 400px;
+  /* max-width: 400px; */ /* Puedes comentar o aumentar este valor */
   min-width: 0;
   box-sizing: border-box;
+  height: 260px; /* Ajusta según el contenido */
+  position: relative;
 }
 
 .card-inner {
   width: 100%;
+  height: 100%;
   transform-style: preserve-3d;
   transition: transform 0.8s;
   position: relative;
@@ -57,7 +73,10 @@ body {
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   position: absolute;
   width: 100%;
-  min-height: 100px;
+  height: 100%;
+  min-height: unset; /* Elimina min-height si usas height fija */
+  top: 0;
+  left: 0;
 }
 
 .card-front img, .card-back img {
@@ -76,8 +95,11 @@ button {
 }
 
 .pagination {
-  margin-top: 1rem;
+  margin-top: 5rem;
+
   text-align: center;
+  position: relative;
+  z-index: 10;
 }
 .pagination button {
   margin: 0 5px;

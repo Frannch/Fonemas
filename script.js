@@ -1,22 +1,16 @@
 
 const fonemas = [
-  { nombre: "a", frente: "img/fonema-a-front.png", reverso: "img/fonema-a-back.png" },
+  { nombre: "a", frente: "Hoja1/tarjeta_tarjeta_0001_0_0.png", reverso: "img/fonema-a-back.png" },
   { nombre: "b", frente: "img/fonema-b-front.png", reverso: "img/fonema-b-back.png" },
   { nombre: "c", frente: "img/fonema-a-front.png", reverso: "img/fonema-a-back.png" },
-  { nombre: "d", frente: "img/fonema-b-front.png", reverso: "img/fonema-b-back.png" },
-  { nombre: "e", frente: "img/fonema-a-front.png", reverso: "img/fonema-a-back.png" },
-  { nombre: "f", frente: "img/fonema-b-front.png", reverso: "img/fonema-b-back.png" },
-  { nombre: "g", frente: "img/fonema-a-front.png", reverso: "img/fonema-a-back.png" },
-  { nombre: "h", frente: "img/fonema-b-front.png", reverso: "img/fonema-b-back.png" },
-  { nombre: "i", frente: "img/fonema-a-front.png", reverso: "img/fonema-a-back.png" },
-  { nombre: "j", frente: "img/fonema-b-front.png", reverso: "img/fonema-b-back.png" }
+  
 ];
 
 const container = document.getElementById('cards-container');
 const search = document.getElementById('search');
 const pagination = document.getElementById('pagination');
 
-const porPagina = 2;
+const porPagina = 12;
 let paginaActual = 1;
 
 function crearTarjeta(fonema) {
