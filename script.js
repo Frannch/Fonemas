@@ -65,8 +65,6 @@ const fonemas = [
 { nombre: "a", frente: "Hoja1/tarjeta_tarjeta_0009_0_7.png", reverso: "Hoja1/tarjeta_0010_7.png" },
 { nombre: "a", frente: "Hoja1/tarjeta_tarjeta_0009_0_8.png", reverso: "Hoja1/tarjeta_0010_6.png" },
 { nombre: "a", frente: "Hoja1/tarjeta_tarjeta_0009_0_9.png", reverso: "Hoja1/tarjeta_0010_11.png" },
-{ nombre: "a", frente: "Hoja1/tarjeta_tarjeta_0009_0_10.png", reverso: "Hoja1/tarjeta_0010_10.png" },
-{ nombre: "z", frente: "Hoja1/tarjeta_tarjeta_0009_0_11.png", reverso: "Hoja1/tarjeta_0010_9.png" },
 ];
 
 const container = document.getElementById('cards-container');
