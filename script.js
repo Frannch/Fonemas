@@ -1,8 +1,16 @@
-
 const fonemas = [
-  { nombre: "a", frente: "Hoja1/tarjeta_tarjeta_0001_0_0.png", reverso: "img/fonema-a-back.png" },
-  { nombre: "b", frente: "img/fonema-b-front.png", reverso: "img/fonema-b-back.png" },
-  { nombre: "c", frente: "img/fonema-a-front.png", reverso: "img/fonema-a-back.png" },
+{ nombre: "a", frente: "Hoja1/tarjeta_tarjeta_0001_0_0.png", reverso: "Hoja1/tarjeta_0002_0.png" },
+{ nombre: "a", frente: "Hoja1/tarjeta_tarjeta_0001_0_1.png", reverso: "Hoja1/tarjeta_0002_1.png" },
+{ nombre: "a", frente: "Hoja1/tarjeta_tarjeta_0001_0_2.png", reverso: "Hoja1/tarjeta_0002_2.png" },
+{ nombre: "a", frente: "Hoja1/tarjeta_tarjeta_0001_0_3.png", reverso: "Hoja1/tarjeta_0002_3.png" },
+{ nombre: "a", frente: "Hoja1/tarjeta_tarjeta_0001_0_4.png", reverso: "Hoja1/tarjeta_0002_4.png" },
+{ nombre: "a", frente: "Hoja1/tarjeta_tarjeta_0001_0_5.png", reverso: "Hoja1/tarjeta_0002_5.png" },
+{ nombre: "a", frente: "Hoja1/tarjeta_tarjeta_0001_0_6.png", reverso: "Hoja1/tarjeta_0002_6.png" },
+{ nombre: "a", frente: "Hoja1/tarjeta_tarjeta_0001_0_7.png", reverso: "Hoja1/tarjeta_0002_7.png" },
+{ nombre: "a", frente: "Hoja1/tarjeta_tarjeta_0001_0_8.png", reverso: "Hoja1/tarjeta_0002_8.png" },
+{ nombre: "a", frente: "Hoja1/tarjeta_tarjeta_0001_0_9.png", reverso: "Hoja1/tarjeta_0002_9.png" },
+{ nombre: "a", frente: "Hoja1/tarjeta_tarjeta_0001_0_10.png", reverso: "Hoja1/tarjeta_0002_10.png" },
+{ nombre: "a", frente: "Hoja1/tarjeta_tarjeta_0001_0_11.png", reverso: "Hoja1/tarjeta_0002_11.png" },
   
 ];
 
@@ -19,12 +27,16 @@ function crearTarjeta(fonema) {
   card.innerHTML = `
     <div class="card-inner">
       <div class="card-front">
-        <img src="\${fonema.frente}" alt="\${fonema.nombre} frente" />
-        <button>Ver reverso</button>
+        <img src="${fonema.frente}" alt="${fonema.nombre} frente" />
+        <div class="card-btn-container">
+          <button>Ver reverso</button>
+        </div>
       </div>
       <div class="card-back">
-        <img src="\${fonema.reverso}" alt="\${fonema.nombre} reverso" />
-        <button>Ver frente</button>
+        <img src="${fonema.reverso}" alt="${fonema.nombre} reverso" />
+        <div class="card-btn-container">
+          <button>Ver frente</button>
+        </div>
       </div>
     </div>
   `;

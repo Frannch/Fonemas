@@ -27,7 +27,7 @@ body {
 #cards-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columnas en escritorio */
-  gap: 50px;
+  gap: 100px; /* Antes 50px, aumenta para más espacio entre filas */
   justify-items: center;
   align-items: start;
   position: relative;
@@ -77,13 +77,21 @@ body {
   min-height: unset; /* Elimina min-height si usas height fija */
   top: 0;
   left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.card-front img, .card-back img {
-  width: 100%;
-  height: auto;
+.card-front img,
+.card-back img {
+  width: 350px;
+  height: 270px;         /* Altura fija para recorte */
+  object-fit: fill;     /* Recorta la imagen para llenar el área */
   border-radius: 8px;
   display: block;
+  margin: 0;
+  border: none;
 }
 
 .card-back {
@@ -92,6 +100,26 @@ body {
 
 button {
   margin-top: 10px;
+  background: #4ade80;      /* Verde claro */
+  color: #fff;              /* Letra blanca */
+  border: none;
+  border-radius: 20px;      /* Más redondeado */
+  padding: 10px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #22c55e;      /* Un verde un poco más oscuro al pasar el mouse */
+}
+
+.card-btn-container {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .pagination {
